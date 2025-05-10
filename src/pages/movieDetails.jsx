@@ -1,4 +1,3 @@
-import React from 'react'
 import MovieDetailsModal from '../components/movieDetailsModal';
 
 const movieDetails = () => {

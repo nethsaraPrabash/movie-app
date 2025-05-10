@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Typography, Button, Grid, Card, CardContent } from '@mui/material';
 import { Rating } from '@mui/material';
 import { motion } from 'framer-motion'; // Import framer-motion for animations

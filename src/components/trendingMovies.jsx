@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchTrendingMovies } from '../services/tmdbService';
 import MovieGrid from './movieGrid';
 import Box from '@mui/material/Box';

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, Typography, Button, TextField, Container, Box, Stack, Link, CssBaseline } from '@mui/material';
+import { useState, useEffect } from 'react';
+import { Typography, Button, Container, Box, Stack, Link, CssBaseline } from '@mui/material';
 import { styled, ThemeProvider, createTheme } from '@mui/material/styles';
 import { motion } from 'framer-motion'; 
 import '../styles/index.css';

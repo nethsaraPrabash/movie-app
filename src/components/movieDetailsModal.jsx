@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
-import Rating from '@mui/material/Rating';
 import Grid from '@mui/material/Grid';
 import Modal from '@mui/material/Modal';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';

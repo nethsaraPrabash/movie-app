@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Box, Select, MenuItem, Slider, Typography, Button, IconButton, Drawer } from '@mui/material';
 import { FilterList } from '@mui/icons-material';
 
