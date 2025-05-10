@@ -59,3 +59,13 @@ Welcome to the **Movie App**, a modern and interactive platform to explore trend
    ```bash
    git clone https://github.com/your-username/movie-app.git
    cd movie-app
+   npm install
+   npm start
+
+### Login Credentials
+  * Since this is a demo version the login is hard coded
+    (Note that the project is just for showing purposes)
+
+  Please user
+  Username = root
+  Password = root  
