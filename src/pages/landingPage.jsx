@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Typography, Button, Container, Box, Stack, Link, CssBaseline } from '@mui/material';
-import { styled, ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { motion } from 'framer-motion'; 
 import '../styles/index.css';
 import { useNavigate } from 'react-router-dom';
 
 
 const LandingPage = () => {
-  const [mode, setMode] = useState('dark');
+  const [mode] = useState('dark');
   const [animationKey, setAnimationKey] = useState(0);
   const navigate = useNavigate();
 
