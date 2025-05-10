@@ -35,10 +35,10 @@ export const fetchFilteredMovies = async ({ genre, year, rating }, page = 1) => 
   const params = {
     api_key: API_KEY,
     page,
-    with_genres: genre || undefined, // Filter by genre if provided
-    primary_release_year: year || undefined, // Filter by release year if provided
-    'vote_average.gte': rating ? rating[0] : undefined, // Minimum rating
-    'vote_average.lte': rating ? rating[1] : undefined, // Maximum rating
+    with_genres: genre || undefined,
+    primary_release_year: year || undefined,
+    'vote_average.gte': rating ? rating[0] : undefined,
+    'vote_average.lte': rating ? rating[1] : undefined,
   };
 
   const response = await axios.get(`${BASE_URL}/discover/movie`, { params });

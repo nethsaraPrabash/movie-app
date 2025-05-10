@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Box, Typography, Button, Grid, Card } from '@mui/material';
 import { Rating } from '@mui/material';
-import { motion } from 'framer-motion'; // Import framer-motion for animations
+import { motion } from 'framer-motion';
 
 const InformationSet = ({ movieDetails }) => {
   const [isTrailerVisible, setIsTrailerVisible] = useState(false);
@@ -50,7 +50,6 @@ const InformationSet = ({ movieDetails }) => {
             alignItems: 'flex-start',
           }}
         >
-          {/* Title and Details */}
           <Grid
             item
             xs={12}
@@ -154,8 +153,8 @@ const InformationSet = ({ movieDetails }) => {
                   sx={{
                     color: '#e50914',
                     fontSize: {
-                      xs: '1.5rem', // Smaller font size for mobile devices
-                      sm: '2rem',   // Default font size for larger screens
+                      xs: '1.5rem',
+                      sm: '2rem',
                     },
                     marginTop: '0.5rem',
                   }}
@@ -166,8 +165,8 @@ const InformationSet = ({ movieDetails }) => {
                     fontFamily: 'Roboto, sans-serif',
                     fontWeight: 'bold',
                     fontSize: {
-                      xs: '0.9rem', // Smaller font size for mobile devices
-                      sm: '1rem',   // Default font size for larger screens
+                      xs: '0.9rem',
+                      sm: '1rem',
                     },
                     color: '#fff',
                     marginTop: '0.5rem',
@@ -194,7 +193,7 @@ const InformationSet = ({ movieDetails }) => {
           {movieDetails.overview}
         </Typography>
 
-        {/* Directors, Writers, Producers */}
+
         <Box
           sx={{
             marginTop: '2rem',
@@ -238,7 +237,6 @@ const InformationSet = ({ movieDetails }) => {
           )}
         </Box>
 
-        {/* Buttons */}
         <Box
           sx={{
             display: 'flex',
@@ -287,7 +285,6 @@ const InformationSet = ({ movieDetails }) => {
           </motion.div>
         </Box>
 
-        {/* Trailer */}
         {isTrailerVisible && trailerKey && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

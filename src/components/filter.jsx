@@ -20,7 +20,6 @@ const Filter = ({ onApplyFilters }) => {
 
   return (
     <>
-      {/* Filter Icon */}
       <IconButton
         onClick={toggleFilterDrawer}
         sx={{
@@ -37,7 +36,6 @@ const Filter = ({ onApplyFilters }) => {
         <FilterList />
       </IconButton>
 
-      {/* Filter Drawer */}
       <Drawer
         anchor="right"
         open={isFilterOpen}
@@ -59,7 +57,7 @@ const Filter = ({ onApplyFilters }) => {
             gap: '1rem',
           }}
         >
-          {/* Genre Filter */}
+
           <Box>
             <Typography variant="body1" gutterBottom>
               Genre
@@ -81,7 +79,7 @@ const Filter = ({ onApplyFilters }) => {
             </Select>
           </Box>
 
-          {/* Year Filter */}
+
           <Box>
             <Typography variant="body1" gutterBottom>
               Year
@@ -103,7 +101,6 @@ const Filter = ({ onApplyFilters }) => {
             </Select>
           </Box>
 
-          {/* Rating Filter */}
           <Box>
             <Typography variant="body1" gutterBottom>
               Rating
@@ -117,7 +114,7 @@ const Filter = ({ onApplyFilters }) => {
             />
           </Box>
 
-          {/* Apply Filters Button */}
+
           <Button
             variant="contained"
             onClick={handleApplyFilters}

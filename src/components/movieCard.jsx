@@ -48,7 +48,7 @@ const MovieCard = ({ movie, onClick }) => {
             transition: 'color 0.3s',
             textOverflow: 'ellipsis',
             overflow: 'hidden',
-            whiteSpace: 'nowrap', // Prevents wrapping of long titles
+            whiteSpace: 'nowrap',
             '&:hover': {
               color: '#1976d2',
             },
@@ -78,7 +78,7 @@ const MovieCard = ({ movie, onClick }) => {
         >
           <Rating
             name="movie-rating"
-            value={movie.vote_average / 2} // Convert rating to a 5-star scale
+            value={movie.vote_average / 2}
             precision={0.5}
             readOnly
             size="small"

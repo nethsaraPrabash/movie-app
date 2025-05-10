@@ -86,7 +86,6 @@ const MovieDetailsModal = ({ movieId }) => {
       >
         <InformationSet movieDetails={movieDetails} />
 
-        {/* Movie Photos */}
         <Box sx={{ marginTop: '2rem' }}>
           <Typography
             variant="h5"
@@ -175,7 +174,7 @@ const MovieDetailsModal = ({ movieId }) => {
               <ArrowBackIosIcon />
             </IconButton>
 
-            {/* Full-Screen Image */}
+
             <img
               src={`https://image.tmdb.org/t/p/original${movieImages[selectedImageIndex]?.file_path}`}
               alt="Full Screen"
@@ -186,7 +185,6 @@ const MovieDetailsModal = ({ movieId }) => {
               }}
             />
 
-            {/* Next Image Button */}
             <IconButton
               onClick={handleNextImage}
               sx={{
@@ -204,7 +202,6 @@ const MovieDetailsModal = ({ movieId }) => {
           </Box>
         </Modal>
 
-        {/* Movie Cast */}
         <Box sx={{ marginTop: '2rem' }}>
           <Typography
             variant="h5"

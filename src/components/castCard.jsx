@@ -7,15 +7,15 @@ const CastCard = ({ actor }) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'space-between', // Ensures content is spaced evenly
-        width: '200px', // Fixed width for the card
-        height: '300px', // Fixed height for the card
+        justifyContent: 'space-between',
+        width: '200px', 
+        height: '300px', 
         padding: '1rem',
         background: 'rgba(255, 255, 255, 0.1)',
         borderRadius: '10px',
         transition: 'transform 0.3s',
         cursor: 'pointer',
-        overflow: 'hidden', // Prevent content overflow
+        overflow: 'hidden',
         '&:hover': {
           transform: 'scale(1.05)',
         },
@@ -42,7 +42,7 @@ const CastCard = ({ actor }) => {
           fontWeight: 'bold',
           textAlign: 'center',
           marginTop: '0.5rem',
-          textOverflow: 'ellipsis', // Truncate long text
+          textOverflow: 'ellipsis', 
           overflow: 'hidden',
           whiteSpace: 'nowrap',
         }}
@@ -55,7 +55,7 @@ const CastCard = ({ actor }) => {
           fontFamily: 'Roboto, sans-serif',
           color: '#aaa',
           textAlign: 'center',
-          textOverflow: 'ellipsis', // Truncate long text
+          textOverflow: 'ellipsis',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
         }}
