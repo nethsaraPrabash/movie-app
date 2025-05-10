@@ -66,6 +66,6 @@ Welcome to the **Movie App**, a modern and interactive platform to explore trend
   * Since this is a demo version the login is hard coded
     (Note that the project is just for showing purposes)
 
-  Please user
-  Username = root
-  Password = root  
+  Please use
+  - Username = root
+  - Password = root  
