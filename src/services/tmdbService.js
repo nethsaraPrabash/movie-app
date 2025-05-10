@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_KEY = 'a0b7593b15abd0c5d16a5520c791b000';
-const BASE_URL = 'https://api.themoviedb.org/3';
+const API_KEY = process.env.REACT_APP_API_KEY;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export const fetchTrendingMovies = async () => {
   const response = await axios.get(`${BASE_URL}/trending/movie/week?api_key=${API_KEY}`);
