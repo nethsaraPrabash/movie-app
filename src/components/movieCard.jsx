@@ -13,6 +13,11 @@ const MovieCard = ({ movie, onClick }) => {
       sx={{
         cursor: 'pointer',
         transition: 'transform 0.3s, box-shadow 0.3s',
+        width: '250px',
+        height: '450px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
         '&:hover': {
           transform: 'scale(1.05)',
           boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
@@ -29,12 +34,22 @@ const MovieCard = ({ movie, onClick }) => {
           borderTopRightRadius: '4px',
         }}
       />
-      <CardContent>
+      <CardContent
+        sx={{
+          flexGrow: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+        }}
+      >
         <Typography
           variant="h6"
           gutterBottom
           sx={{
             transition: 'color 0.3s',
+            textOverflow: 'ellipsis',
+            overflow: 'hidden',
+            whiteSpace: 'nowrap', // Prevents wrapping of long titles
             '&:hover': {
               color: '#1976d2',
             },
@@ -49,7 +64,7 @@ const MovieCard = ({ movie, onClick }) => {
           sx={{
             transition: 'color 0.3s',
             '&:hover': {
-              color: '#1976d2', // Change release year color on hover
+              color: '#1976d2',
             },
           }}
         >
@@ -79,7 +94,7 @@ const MovieCard = ({ movie, onClick }) => {
               transition: 'color 0.3s',
               '&:hover': {
                 color: '#1976d2',
-                transform: 'scale(1.2)'
+                transform: 'scale(1.2)',
               },
             }}
           >

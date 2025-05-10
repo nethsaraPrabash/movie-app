@@ -7,12 +7,13 @@ const MovieGrid = ({ movies, onMovieClick }) => {
     <Grid
       container
       spacing={3}
-      justifyContent="center" 
-      alignItems="center" 
+      justifyContent="center"
+      alignItems="center"
       sx={{
-        margin: '0 auto', 
-        maxWidth: '1200px', 
-        padding: '1rem', 
+        margin: '0 auto',
+        width: '100%',
+        maxWidth: '1200px',
+        padding: '1rem',
       }}
     >
       {movies.map((movie) => (

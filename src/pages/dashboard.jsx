@@ -1,4 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
+import { useMediaQuery } from '@mui/material';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import SearchBar from '../components/searchBar';
 import TrendingMovies from '../components/trendingMovies';
 import MovieGrid from '../components/movieGrid';
@@ -15,6 +17,9 @@ const Dashboard = () => {
   const [hasMore, setHasMore] = useState(true);
   const { themeMode } = useContext(ThemeContext);
   const observerRef = useRef();
+  const navigate = useNavigate(); // Initialize navigate
+
+  const isLargeScreen = useMediaQuery('(min-width:600px)');
 
   const handleSearch = async (newQuery) => {
     setQuery(newQuery);
@@ -42,7 +47,7 @@ const Dashboard = () => {
   };
 
   const handleMovieClick = (movieId) => {
-    setSelectedMovieId(movieId);
+    navigate(`/movie/${movieId}`); // Navigate to the MovieDetails page
   };
 
   const handleCloseModal = () => {
@@ -88,30 +93,31 @@ const Dashboard = () => {
           marginBottom: '1rem',
         }}
       >
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <img
-            src="/logo.png"
-            alt="Logo"
-            style={{
-              height: '40px',
-              marginRight: '10px',
-            }}
-          />
-          <h1
-            style={{
-              fontFamily: 'Bebas Neue, sans-serif', // Netflix-like font
-              fontSize: '1.8rem',
-              color: themeMode === 'dark' ? '#e50914' : '#d32f2f', // Netflix red
-              margin: 0,
-            }}
-          >
-            JSPARROW
-          </h1>
-        </Box>
+        {isLargeScreen && ( // Show logo only on larger screens
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <img
+              src="/logo.png"
+              alt="Logo"
+              style={{
+                height: '40px',
+                marginRight: '10px',
+              }}
+            />
+            <h1
+              style={{
+                fontFamily: 'Bebas Neue, sans-serif', // Netflix-like font
+                fontSize: '1.8rem',
+                color: themeMode === 'dark' ? '#e50914' : '#d32f2f', // Netflix red
+                margin: 0,
+              }}
+            >
+              JSPARROW
+            </h1>
+          </Box>
+        )}
 
         <SearchBar onSearch={handleSearch} />
       </Box>
-
 
       <Box
         sx={{
@@ -133,12 +139,6 @@ const Dashboard = () => {
           </>
         )}
       </Box>
-
-      <MovieDetailsModal
-        movieId={selectedMovieId}
-        open={!!selectedMovieId}
-        onClose={handleCloseModal}
-      />
     </div>
   );
 };

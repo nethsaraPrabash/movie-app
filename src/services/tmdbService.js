@@ -14,7 +14,20 @@ export const searchMovies = async (query, page = 1) => {
   );
   return response.data.results;
 };
+
 export const fetchMovieDetails = async (movieId) => {
   const response = await axios.get(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&append_to_response=videos,credits`);
   return response.data;
 };
+
+export const fetchMovieCredits = async (movieId) => {
+  const response = await axios.get(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`);
+  return response.data;
+};
+
+export const fetchMovieImages = async (movieId) => {
+  const response = await axios.get(`${BASE_URL}/movie/${movieId}/images?api_key=${API_KEY}`);
+  return response.data;
+};
+
+
