@@ -41,9 +41,6 @@ const Dashboard = () => {
     setHasMore(false);
   };
 
-  const handleMovieClick = (movieId) => {
-    navigate(`/movie/${movieId}`);
-  };
 
   return (
     <div

@@ -5,24 +5,6 @@ import { motion } from 'framer-motion';
 import '../styles/index.css';
 import { useNavigate } from 'react-router-dom';
 
-const StyledBox = styled('div')(({ theme }) => ({
-  alignSelf: 'center',
-  width: '100%',
-  height: 400,
-  marginTop: theme.spacing(8),
-  borderRadius: theme.shape.borderRadius,
-  outline: '6px solid',
-  outlineColor: theme.palette.mode === 'dark' ? 'hsla(220, 20%, 42%, 0.1)' : 'hsla(220, 25%, 80%, 0.2)',
-  border: '1px solid',
-  borderColor: theme.palette.mode === 'dark' ? theme.palette.grey[700] : theme.palette.grey[200],
-  boxShadow: theme.palette.mode === 'dark' ? '0 0 24px 12px hsla(210, 100%, 25%, 0.2)' : '0 0 12px 8px hsla(220, 25%, 80%, 0.2)',
-  backgroundImage: `url('/public/movie-hero.jpg')`,
-  backgroundSize: 'cover',
-  [theme.breakpoints.up('sm')]: {
-    marginTop: theme.spacing(10),
-    height: 700,
-  },
-}));
 
 const LandingPage = () => {
   const [mode, setMode] = useState('dark');
@@ -37,10 +19,6 @@ const LandingPage = () => {
       },
     },
   });
-
-  const toggleMode = () => {
-    setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-  };
 
   const typewriterVariants = {
     hidden: { opacity: 0 },
@@ -149,7 +127,7 @@ const LandingPage = () => {
                 borderRadius: '8px'
               }}
               onClick={() => {
-                  navigate('/login'); // Correctly handle navigation here
+                  navigate('/login');
                 }}
 
             >
