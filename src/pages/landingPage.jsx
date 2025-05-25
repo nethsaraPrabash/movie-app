@@ -127,7 +127,7 @@ const LandingPage = () => {
                 borderRadius: '8px'
               }}
               onClick={() => {
-                  navigate('/login');
+                  navigate('/dashboard');
                 }}
 
             >
